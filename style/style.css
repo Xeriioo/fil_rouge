@@ -11,6 +11,26 @@
   font-style: normal;
 }
 
+/* Variables CSS */
+:root {
+  --couleur-fond: #041821;
+  --couleur-texte: white;
+  --couleur-main-text: #64777f;
+  --couleur-surlignage: #3d917a;
+  --secondary-font-color: #1ece9a;
+  --font-size-small: 10px;
+  --font-size-medium: 18px;
+  --font-size-large: 24px;
+  --font-size-llarge: 37px;
+}
+
+/* Styles pour l'élément body */
+body {
+  background-color: var(--couleur-fond);
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
 /* Styles pour l'élément header */
 header {
   display: grid;
@@ -19,24 +39,16 @@ header {
   padding: 16px;
 }
 
-/* Styles pour les paragraphes dans le header */
 header p {
-  color: white;
-  font-size: 18px;
+  color: var(--couleur-texte);
+  font-size: var(--font-size-medium);
 }
 
 /* Styles pour l'élément hr */
 hr {
   border: 0;
   height: 0.5px;
-  background-color: #ffffff;
-}
-
-/* Styles pour l'élément body */
-body {
-  background-color: #041821;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
+  background-color: var(--couleur-texte);
 }
 
 /* Styles pour l'élément main */
@@ -45,106 +57,117 @@ main {
   font-family: "MaPolice";
 }
 
-/* Styles pour les paragraphes dans le main */
 main p {
-  color: white;
+  color: var(--couleur-texte);
   font-family: "Yeseva One", sans-serif;
-  font-size: 37px;
+  font-size: var(--font-size-llarge);
   margin-top: 0;
 }
 
-main #presentation {
-  width: 805px;
-  height: 150px;
+main #main-text {
+  font-size: var(--font-size-small);
+  color: var(--couleur-main-text);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 main #parentprest {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 40px;
+  flex-wrap: wrap;
 }
 
+.parent-main-text,
+main #parentprest,
 .menu-parent {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.parent-main-text {
+  display: flex;
+  justify-content: center;
   margin-bottom: 40px;
 }
 
 main ul {
-  display: flex; 
-  list-style-type: none; 
-  padding: 0; 
-  margin: 0; 
-  color: white;
-  font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: var(--couleur-texte);
+  font-size: var(--font-size-small);
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 main li {
-  margin-right: 35px;
+  margin-right: 5px;
+  text-align: center;
 }
 
-/* Styles pour l'élément avec la classe div1 */
+.li1 {
+  width: 364px;
+  align-items: center;
+}
+
 .div1 {
   padding: 8px;
   margin: 0;
 }
 
-/* Styles pour l'élément avec l'ID point dans div1 */
 .div1 #point {
-  color: #3d917a;
-  font-size: 24px;
+  color: var(--couleur-surlignage);
+  font-size: var(--font-size-large);
 }
 
-/* Styles pour l'élément avec la classe div2 */
 .div2 {
   text-align: right;
   margin-top: 16px;
 }
 
-/* Styles pour les éléments i dans div2 */
 .div2 i {
   margin-left: 25px;
-  font-size: 18px;
+  font-size: var(--font-size-medium);
 }
 
-/* Styles pour l'élément avec l'ID vert */
 #vert {
-  color: #1ece9a;
+  color: var(--secondary-font-color);
 }
 
 .menu-highlight {
-  background-color: #3d917a; 
-  padding: 5px; 
+  background-color: var(--couleur-surlignage);
+  padding: 5px;
 }
 
-/* Styles pour l'élément avec la classe grid-parent */
 .grid-parent {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 95vh;
 }
 
-/* Styles pour l'élément avec la classe grid-container */
 .grid-container {
   display: grid;
   grid-gap: 1px;
   padding: 1px;
 }
 
-/* Styles pour l'élément footer */
+.grid-item img {
+  height: auto;
+}
+
 footer {
-  color: white;
+  color: var(--couleur-texte);
   text-align: center;
   padding: 16px;
   font-size: 11px;
 }
 
-/* Styles pour l'élément avec l'ID footb dans footer */
 footer #footb {
-  color: white;
+  color: var(--couleur-texte);
   font-size: 18px;
   text-align: center;
   font-size: 9px;
@@ -153,7 +176,7 @@ footer #footb {
 /* Styles responsives */
 
 /* Styles pour les écrans de taille maximale de 600px */
-@media (max-width: 600px) {
+@media (max-width: 510px) {
   header {
     grid-template-columns: 1fr;
     padding: 0px 32px;
@@ -185,13 +208,40 @@ footer #footb {
   }
 
   main #parentprest {
-    margin-bottom: 90px;
+    margin-bottom: 3vh;
   }
 
-  main p {
-    margin-top: 0;
+  main ul {
+    font-size: var(--font-size-small);
   }
 
+  main li {
+    margin-right: 25px;
+  }
+
+  .parent-main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  main #main-text {
+    display: flex;
+    text-align: left;
+
+    flex-wrap: wrap;
+  }
+
+  .menu-parent {
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+
+  .main-text {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .hide-on-mobile {
     display: none;
@@ -199,30 +249,23 @@ footer #footb {
 
   .grid-container {
     grid-template-columns: repeat(3, 1fr);
+    gap: 9px;
   }
 
-  .grid-parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 42vh;
+  .grid-item {
+    height: 100px;
   }
 
-    .grid-item img {
-      max-width: 120px;
-      height: auto;
-    }
+  .grid-item img {
+    max-width: 100px;
+    height: 100px;
   }
+}
 
 /* Styles pour les écrans de taille entre 601px et 1024px */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 511px) and (max-width: 1024px) {
   header {
-    grid-template-columns: 1fr 1fr;
     padding: 8px 32px;
-  }
-
-  header p {
-    font-size: 18px;
   }
 
   .div1 #point {
@@ -233,8 +276,13 @@ footer #footb {
     margin-top: 5px;
   }
 
-  main #parentprest {
-    margin-bottom: 110px;
+  .main-text {
+    margin-bottom: 4vh;
+    width: 600px;
+  }
+
+  main #presentation {
+    width: 805px;
   }
 
   main h1 {
@@ -247,39 +295,52 @@ footer #footb {
     padding-top: 45px;
   }
 
+  main li {
+    font-size: 10px;
+    margin-right: 20px;
+  }
+
   main p {
-    margin-top: 0;
     font-size: 55px;
   }
-  
 
-
-  .grid-parent {
+  main #presentation {
+    width: 100%;
+    height: auto;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
-    height: 50vh;
+    margin-bottom: 10px;
+  }
+
+  .menu-parent {
+    padding-bottom: 4vh;
+  }
+
+  .main-text {
+    width: 100%;
   }
 
   .grid-container {
     grid-template-columns: repeat(6, 1fr);
+    gap: 7px;
   }
 
   .grid-item img {
-    max-width: 140px;
-    height: auto;
+    max-width: 133px;
+    height: 133px;
+  }
+
+  .grid-item {
+    max-width: 133px;
+    height: 133px;
   }
 }
 
 /* Styles pour les écrans de taille minimale de 1025px */
 @media (min-width: 1025px) {
   header {
-    grid-template-columns: 1fr 1fr;
     padding: 4px 32px;
-  }
-
-  header p {
-    font-size: 16px;
   }
 
   .div1 #point {
@@ -290,26 +351,37 @@ footer #footb {
     margin-top: 5px;
   }
 
-  main #presentation {
-    width: 805px;
-    height: 150px;
-  }
-
-  main #parentprest {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
   main {
     padding-top: 30px;
     padding-left: 85px;
     padding-right: 85px;
   }
 
-  main p {
+  main ul {
+    margin-left: 32px;
+    font-size: 13px;
+  }
+
+  main #presentation {
+    width: 805px;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  main #main-text {
     text-align: left;
+    width: 805px;
+  }
+
+  main #parentprest {
+    margin-bottom: 3vh;
+  }
+
+  .menu-parent {
+    padding-bottom: 2vh;
   }
 
   .hide-on-computer {
@@ -318,6 +390,15 @@ footer #footb {
 
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
   }
 
+  .grid-parent {
+    height: 95vh;
+  }
+
+  .grid-item {
+    max-width: 200px;
+    height: 200px;
+  }
 }
