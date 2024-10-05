@@ -53,6 +53,38 @@ main p {
   margin-top: 0;
 }
 
+main #presentation {
+  width: 805px;
+  height: 150px;
+}
+
+main #parentprest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.menu-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+main ul {
+  display: flex; 
+  list-style-type: none; 
+  padding: 0; 
+  margin: 0; 
+  color: white;
+  font-size: 13px;
+}
+
+main li {
+  margin-right: 35px;
+}
+
 /* Styles pour l'élément avec la classe div1 */
 .div1 {
   padding: 8px;
@@ -124,6 +156,7 @@ footer #footb {
 @media (max-width: 600px) {
   header {
     grid-template-columns: 1fr;
+    padding: 0px 32px;
     text-align: center;
   }
 
@@ -151,9 +184,14 @@ footer #footb {
     padding-right: 10px;
   }
 
+  main #parentprest {
+    margin-bottom: 90px;
+  }
+
   main p {
     margin-top: 0;
   }
+
 
   .hide-on-mobile {
     display: none;
@@ -163,11 +201,18 @@ footer #footb {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .grid-item img {
-    width: 50%;
-    object-fit: cover;
+  .grid-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42vh;
   }
-}
+
+    .grid-item img {
+      max-width: 120px;
+      height: auto;
+    }
+  }
 
 /* Styles pour les écrans de taille entre 601px et 1024px */
 @media (min-width: 601px) and (max-width: 1024px) {
@@ -188,6 +233,10 @@ footer #footb {
     margin-top: 5px;
   }
 
+  main #parentprest {
+    margin-bottom: 110px;
+  }
+
   main h1 {
     font-size: 32px;
   }
@@ -200,6 +249,25 @@ footer #footb {
 
   main p {
     margin-top: 0;
+    font-size: 55px;
+  }
+  
+
+
+  .grid-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .grid-item img {
+    max-width: 140px;
+    height: auto;
   }
 }
 
@@ -244,26 +312,12 @@ footer #footb {
     text-align: left;
   }
 
-  .menu-parent {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  main ul {
-    display: flex; 
-    list-style-type: none; 
-    padding: 0; 
-    margin: 0; 
-    color: white;
-    font-size: 13px;
-  }
-
-  main li {
-    margin-right: 35px;
+  .hide-on-computer {
+    display: none;
   }
 
   .grid-container {
     grid-template-columns: repeat(4, 1fr);
   }
+
 }
