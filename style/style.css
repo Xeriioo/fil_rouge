@@ -17,7 +17,7 @@
   --couleur-texte: white;
   --couleur-main-text: #64777f;
   --couleur-surlignage: #3d917a;
-  --secondary-font-color: #1ece9a;
+  --couleur-fond2: #1ece9a;
   --font-size-small: 10px;
   --font-size-medium: 18px;
   --font-size-large: 24px;
@@ -85,12 +85,6 @@ main #parentprest,
   flex-wrap: wrap;
 }
 
-.parent-main-text {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-}
-
 main ul {
   display: flex;
   flex-wrap: wrap;
@@ -105,12 +99,11 @@ main ul {
 }
 
 main li {
-  margin-right: 5px;
+  margin-right: 35px;
   text-align: center;
 }
 
 .li1 {
-  width: 364px;
   align-items: center;
 }
 
@@ -135,7 +128,7 @@ main li {
 }
 
 #vert {
-  color: var(--secondary-font-color);
+  color: var(--couleur-fond2);
 }
 
 .menu-highlight {
@@ -144,9 +137,11 @@ main li {
 }
 
 .grid-parent {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .grid-container {
@@ -176,7 +171,7 @@ footer #footb {
 /* Styles responsives */
 
 /* Styles pour les écrans de taille maximale de 600px */
-@media (max-width: 510px) {
+@media (max-width: 640px) {
   header {
     grid-template-columns: 1fr;
     padding: 0px 32px;
@@ -204,32 +199,25 @@ footer #footb {
 
   main {
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 25px;
   }
 
   main #parentprest {
-    margin-bottom: 3vh;
+    justify-content: left;
   }
 
   main ul {
     font-size: var(--font-size-small);
+    margin-left: 20px;
   }
 
   main li {
     margin-right: 25px;
   }
 
-  .parent-main-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-
   main #main-text {
     display: flex;
     text-align: left;
-
     flex-wrap: wrap;
   }
 
@@ -241,6 +229,11 @@ footer #footb {
   .main-text {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .parent-main-text {
+    padding-bottom: 2vh;
   }
 
   .hide-on-mobile {
@@ -263,7 +256,12 @@ footer #footb {
 }
 
 /* Styles pour les écrans de taille entre 601px et 1024px */
-@media (min-width: 511px) and (max-width: 1024px) {
+@media (min-width: 641px) and (max-width: 1024px) {
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   header {
     padding: 8px 32px;
   }
@@ -290,13 +288,13 @@ footer #footb {
   }
 
   main {
-    padding-left: 70px;
-    padding-right: 70px;
     padding-top: 45px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 
   main li {
-    font-size: 10px;
+    font-size: 16px;
     margin-right: 20px;
   }
 
@@ -315,6 +313,10 @@ footer #footb {
 
   .menu-parent {
     padding-bottom: 4vh;
+  }
+
+  main #main-text {
+    font-size: 15px;
   }
 
   .main-text {
@@ -372,6 +374,7 @@ footer #footb {
   }
 
   main #main-text {
+    font-size: 15px;
     text-align: left;
     width: 805px;
   }
@@ -381,7 +384,11 @@ footer #footb {
   }
 
   .menu-parent {
-    padding-bottom: 2vh;
+    padding-bottom: 0vh;
+  }
+
+  .parent-main-text {
+    padding-bottom: 3vh;
   }
 
   .hide-on-computer {
