@@ -162,7 +162,7 @@ footer #footb {
 
 /* Styles responsives */
 
-/* Styles pour les écrans de taille maximale de 600px */
+/* Styles pour les écrans de taille maximale de 640px */
 @media (max-width: 640px) {
   header {
     grid-template-columns: 1fr;
@@ -175,7 +175,8 @@ footer #footb {
   }
 
   .div1 {
-    height: 12vh;
+    height: 10vh;
+    padding: 0px;
   }
 
   .div2 {
