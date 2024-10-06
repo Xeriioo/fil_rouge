@@ -195,6 +195,7 @@ footer #footb {
   }
 
   main {
+    padding-top: 50px;
     padding-left: 10px;
     padding-right: 15px;
   }
@@ -252,11 +253,15 @@ footer #footb {
   }
 }
 
-/* Styles pour les écrans de taille entre 601px et 1024px */
+/* Styles pour les écrans de taille entre 641px et 1024px */
 @media (min-width: 641px) and (max-width: 1024px) {
   body {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  main {
+    padding-top: 50px;
   }
 
   header {
