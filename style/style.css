@@ -2,15 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
 
-/* Définition d'une police personnalisée */
-@font-face {
-  font-family: "MaPolice";
-  src: url("font/Montserrat/Montserrat-Italic-VariableFont_wght.ttf")
-    format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 /* Variables CSS */
 :root {
   --couleur-fond: #041821;
@@ -42,6 +33,7 @@ header {
 header p {
   color: var(--couleur-texte);
   font-size: var(--font-size-medium);
+  font-family: "Yeseva One", sans-serif;
 }
 
 /* Styles pour l'élément hr */
@@ -54,7 +46,7 @@ hr {
 /* Styles pour l'élément main */
 main {
   padding-top: 65px;
-  font-family: "MaPolice";
+  font-family: "Montserrat";
 }
 
 main p {
@@ -182,10 +174,14 @@ footer #footb {
     font-size: 24px;
   }
 
+  .div1 {
+    height: 12vh;
+  }
+
   .div2 {
     text-align: center;
-    margin-bottom: 50px;
-    padding-right: 22px;
+    margin-bottom: 30px;
+    padding-right: 32px;
     margin-top: 0;
   }
 
@@ -401,7 +397,7 @@ footer #footb {
   }
 
   .grid-parent {
-    height: 95vh;
+    padding-top: 30px;
   }
 
   .grid-item {
