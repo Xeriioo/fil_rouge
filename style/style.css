@@ -169,7 +169,7 @@ main li {
 
 /* Styles pour l'élément footer */
 footer {
-  color: var(--couleur-texte);
+  color: var(--couleur-main-text);
   text-align: center;
   padding: 16px;
   font-size: 11px;
@@ -177,7 +177,7 @@ footer {
 
 /* Styles pour l'élément avec l'id footb dans le footer */
 footer #footb {
-  color: var(--couleur-texte);
+  color: var(--couleur-main-text);
   font-size: 9px;
 }
 
