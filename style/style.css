@@ -67,6 +67,7 @@ main p {
 main #main-text {
   font-size: var(--font-size-small);
   color: var(--couleur-main-text);
+  font-family: "Montserrat";
   display: flex;
   flex-wrap: wrap;
 }
